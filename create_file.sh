@@ -20,3 +20,4 @@ echo "#   $2" >> $1
 echo "# Hostory:" >> $1
 date=$(date)
 echo "#   $date kis" >> $1
+vim $1

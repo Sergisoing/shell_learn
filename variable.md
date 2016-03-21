@@ -24,11 +24,31 @@
 		
 		x=hello
 		y=2
-		echo $(($x + $y)) # 2
+		echo $(($x + $y)) # 
 	
-5. 变量的长度
-		
-		
+5. shell 中字符串的匹配模式
+
+		eg:
+		默认值：
+			${str:-default}
+		长度:
+			${#str}
+		字符串(substr):
+			${str:2:3} # 2-4个字符
+			${str: -2}
+		开头或者末尾裁剪:
+			str="hello world"
+			echo ${str#*l} # lo world
+			echo ${str##*l} # d
+			相反是%和%%
+		替换
+			${str/str1/str2} #一次替换
+			${str//str1/str2} #全部替换
+			${str/#str1/str2} #以str1开头的字母
+			${str/%str1/str2} #以str2末尾的字母
+		大小写转化
+			${str^^}  #小转大
+			${str,,}	#大转小	
 	
 ## 循环
 
